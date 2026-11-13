@@ -1,0 +1,187 @@
+{
+  "info": {
+    "name": "VOID IN VACCUM STORE API",
+    "description": "Postman Collection for FSWD Lab 8 (Controllers, Modules & Services) - VOID IN VACCUM STORE",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "0. Root / Health Check",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": [""]
+        }
+      }
+    },
+    {
+      "name": "Products (Cyber Shirts, Caps & Tools)",
+      "item": [
+        {
+          "name": "GET All Products",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/products",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["products"]
+            }
+          }
+        },
+        {
+          "name": "GET Products with Query (?search=tee)",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/products?search=tee",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["products"],
+              "query": [
+                { "key": "search", "value": "tee" }
+              ]
+            }
+          }
+        },
+        {
+          "name": "GET Cyber Caps (?tag=CYBER CAP)",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/products?tag=CYBER%20CAP",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["products"],
+              "query": [
+                { "key": "tag", "value": "CYBER CAP" }
+              ]
+            }
+          }
+        },
+        {
+          "name": "GET Single Item (/products/1)",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/products/1",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["products", "1"]
+            }
+          }
+        },
+        {
+          "name": "POST Create New Cyber Piece",
+          "request": {
+            "method": "POST",
+            "header": [
+              { "key": "Content-Type", "value": "application/json" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"CYBERPUNK CARGO JOGGERS\",\n  \"category\": \"apparel\",\n  \"description\": \"Matte black water-repellent techwear cargo with magnetic buckle straps\",\n  \"price\": 78,\n  \"tag\": \"NEW DROP\",\n  \"stock\": 15\n}"
+            },
+            "url": {
+              "raw": "http://localhost:3000/products",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["products"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Orders (Store Orders)",
+      "item": [
+        {
+          "name": "GET All Orders",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/orders",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["orders"]
+            }
+          }
+        },
+        {
+          "name": "POST Submit Store Order",
+          "request": {
+            "method": "POST",
+            "header": [
+              { "key": "Content-Type", "value": "application/json" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"firstName\": \"Faizan\",\n  \"lastName\": \"Tariq\",\n  \"email\": \"faizan@securitylab.edu\",\n  \"address\": \"Cyber Defense Lab 402, AU Islamabad\",\n  \"items\": [\n    {\n      \"productId\": 1,\n      \"name\": \"VOID // 127.0.0.1 TEE\",\n      \"price\": 42,\n      \"quantity\": 1\n    },\n    {\n      \"productId\": 3,\n      \"name\": \"NULL_POINTER STRAPBACK\",\n      \"price\": 32,\n      \"quantity\": 1\n    }\n  ]\n}"
+            },
+            "url": {
+              "raw": "http://localhost:3000/orders",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["orders"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Reviews",
+      "item": [
+        {
+          "name": "GET All Reviews",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/reviews",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["reviews"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Newsletter",
+      "item": [
+        {
+          "name": "GET All Subscribers",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/newsletter",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["newsletter"]
+            }
+          }
+        }
+      ]
+    }
+  ]
+}
