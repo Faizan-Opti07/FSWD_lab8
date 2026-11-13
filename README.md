@@ -6,9 +6,6 @@ Full Stack Web Development (FSWD) Lab 8 coursework.
 - **Store Name**: VOID IN VACCUM STORE
 - **Frontend**: Responsive storefront in HTML5 and Bootstrap 5 (`Lab8/T6Void_Iz_VaccumStore/T6_Void_iz_VAccum_Store.html`).
 - **Backend**: Modular NestJS REST API with Controllers, Modules, and Services (`Lab8/T6Void_Iz_VaccumStore/backend/`).
-  - No pipes or guards
-  - No database (in-memory services)
-  - No authentication
 
 ## Running the Backend
 ```bash
